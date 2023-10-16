@@ -10,6 +10,9 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:get_it/get_it.dart' as _i1;
+import 'package:hercules_mobile/core/service/navigation_service.dart' as _i3;
+import 'package:hercules_mobile/core/service_impl/navigation_service_impl.dart'
+    as _i4;
 import 'package:injectable/injectable.dart' as _i2;
 
 extension GetItInjectableX on _i1.GetIt {
@@ -23,6 +26,7 @@ extension GetItInjectableX on _i1.GetIt {
       environment,
       environmentFilter,
     );
+    gh.factory<_i3.NavigationService>(() => _i4.NavigationServiceImpl());
     return this;
   }
 }
